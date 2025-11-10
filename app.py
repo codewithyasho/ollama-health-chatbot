@@ -61,7 +61,7 @@ def initialize_chatbot():
     """Initialize the chatbot components"""
     with st.spinner("🔄 Loading AI model and medical knowledge base..."):
         try:
-            embeddings = huggingface_embeddings()
+            embeddings = huggingface_embeddings(model_name="BAAI/bge-base-en-v1.5")
             vectorstore = load_vectorstore(
                 embeddings=embeddings,
                 vectorstore_path="faiss_index"

@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-embeddings = huggingface_embeddings()
+embeddings = huggingface_embeddings(model_name="BAAI/bge-base-en-v1.5")
 vectorstore = load_vectorstore(
     embeddings=embeddings,
     vectorstore_path="faiss_index"
